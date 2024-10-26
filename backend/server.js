@@ -8,7 +8,9 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://mongodbcrud-frontend.onrender.com' // Replace this with your actual frontend URL
+}));
 app.use(express.json()); // To parse JSON bodies
 
 // Connect to MongoDB
