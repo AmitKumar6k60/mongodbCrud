@@ -12,7 +12,7 @@ const StudentForm = ({ onStudentAdded }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5001/api/students', student);
+            await axios.post('http://https://mongodbcrud-backend.onrender.com/api/students', student);
             alert('Student added successfully');
             setStudent({ name: '', age: '', major: '', enrollment_date: '', gpa: '' });
             onStudentAdded(); // Trigger the refresh after adding
